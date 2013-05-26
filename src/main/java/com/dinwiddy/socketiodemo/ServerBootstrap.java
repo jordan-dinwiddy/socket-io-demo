@@ -14,7 +14,7 @@ import com.dinwiddy.socketiodemo.domain.TestEvent;
 
 public class ServerBootstrap {
 
-	private static final int PUSH_MESSAGE_DELAY_MS = 1000;
+	private static final int PUSH_MESSAGE_DELAY_MS = 400;
 	private static SocketIOServer server;
 	private static final Logger LOGGER = LoggerFactory.getLogger(ServerBootstrap.class);
 	

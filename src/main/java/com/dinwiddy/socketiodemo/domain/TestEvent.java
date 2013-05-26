@@ -17,7 +17,7 @@ public final class TestEvent {
 	
 	public static TestEvent newRandomEvent() {
 		
-		int i = r.nextInt(100);
+		int i = r.nextInt(56) + 1;
 		TestEvent e = new TestEvent(i, "This is a test event", System.currentTimeMillis());
 		return e;
 	}
