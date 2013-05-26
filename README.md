@@ -1,7 +1,7 @@
 socket-io-demo
 ==============
 
-Demo code using Socket IO and the bindings available in Java
+Examples of using Socket IO and the bindings available in Java.
 
 How to compile and run
 ----------------------
