@@ -18,3 +18,4 @@ dependency-reduced-pom.xml
 #Compile target
 target/
 
+.DS_Store
