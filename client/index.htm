@@ -57,6 +57,11 @@
 		float: left;
 	}
 
+	.thumb-container-small {
+		/** When the right side pane is showing */
+		width: 70%;
+	}
+
 	.thumb-container:after { 
 		content: " ";
 		display: block; 
@@ -117,8 +122,8 @@
 	#console { 
 		height: 150px; 
 		overflow: auto; 
-		margin: 20px;
-		width: 100%;
+		/*margin: 20px;
+		width: 100%; */
 	}
 
 	#page-title {
@@ -142,6 +147,7 @@
 		width: 25%;
 		height: 100%;
 		margin-top: 20px;
+		display: none;
 	}
 
 </style>
@@ -206,7 +212,7 @@
 	<h1 id="page-title">Switches</h1>
 	<div id="page-links">
 		<a href="#">Add Alert</a> | 
-		<a href="#">Show Console</a>
+		<a href="javascript: toggleConsole()">Console</a>
 	</div>
 	<div id="page-title-seperator"><!--Seperator --></div>
 	<div class="thumb-container">
@@ -214,10 +220,9 @@
 	</div>
 
 	<div id="right-pane">
+		<div id="console">
+		</div>
 	</div>
-	<div id="console" class="">
-	</div>
-
 </div>
 
 </body>
@@ -246,6 +251,26 @@ for(var i = 0; i < 40; i++) {
 
 	var html = Mustache.to_html(alertTemplate, alertData);
 	$('.thumb-container').append(html);
+}
+
+consoleShowing = false;
+
+function hideConsole() {
+	$('.thumb-container').removeClass("thumb-container-small");
+	consoleShowing = false;
+	$("#right-pane").hide();
+}
+function showConsole() {
+	$('.thumb-container').addClass("thumb-container-small");
+	consoleShowing = true;
+	$("#right-pane").show();
+}
+function toggleConsole() {
+	if(consoleShowing) {
+		hideConsole();
+	} else {
+		showConsole();
+	}
 }
 </script>
 
