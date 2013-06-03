@@ -22,6 +22,7 @@
 		height:100%;
 		padding: 0px;
 		margin: 0px;
+		background-color: #f5f5f5;
 	}
 
 	.content-div {
@@ -37,8 +38,12 @@
 
 		 padding-top: 20px;
 		/* height: 100%; */
+		
+		/** 
+		Set this at the body level
 		background-color: #f5f5f5;
 		**/
+		
 	}
 
 	.main-container {
@@ -150,6 +155,8 @@
 		display: none;
 	}
 
+	.clear-content-div { clear: both;}
+
 </style>
 
 
@@ -221,8 +228,13 @@
 
 	<div id="right-pane">
 		<div id="console">
+			Welcome dude!
 		</div>
 	</div>
+
+	<!-- So that the 'content-div' will fully contain it's floating child divs -
+		http://www.welovecss.com/showthread.php?t=465 -->
+	<div class="clear-content-div"></div>
 </div>
 
 </body>
